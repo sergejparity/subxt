@@ -4,13 +4,14 @@ on:
   # Allow it to be manually ran to rebuild binary when needed:
   workflow_dispatch: {}
   # Run at 2am every day for nightly builds.
-  schedule:
-    - cron: "0 2 * * *"
+  # schedule:
+  #   - cron: "0 2 * * *"
 
 jobs:
   tests:
     name: Build Substrate
-    runs-on: ubuntu-latest-16-cores
+    # runs-on: ubuntu-latest-16-cores
+    runs-on: ubuntu-latest
     steps:
       - name: checkout polkadot-sdk
         uses: actions/checkout@v4
